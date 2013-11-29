@@ -1,0 +1,8 @@
+#!/bin/sh
+# !hard coding! This script runs only on my environment.
+
+cd ~/Documents/program/topcoder
+if [ -e ./*.py ]; then
+    git mv ./*.py ./archives/
+fi
+open ~/software/topcoder/ContestAppletProd.jnlp
