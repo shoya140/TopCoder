@@ -3,6 +3,6 @@
 
 cd ~/Documents/program/topcoder
 if [ -e ./*.py ]; then
-    git mv ./*.py ./archives/
+    mv ./*.py ./archives/
 fi
 open ~/software/topcoder/ContestAppletProd.jnlp
