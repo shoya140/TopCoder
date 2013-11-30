@@ -3,11 +3,10 @@ import string
 
 class CCipher:
     def decode(self, cipherText, shift):
-        text_list = list(cipherText)
-        res_list = []
-        for val in text_list:
-            res_list.append(self.getDecodedChar(val, shift))
-        return "".join(res_list)
+        res = ""
+        for val in cipherText:
+            res = res + self.getDecodedChar(val, shift)
+        return res
 
     def getDecodedChar(self, char, shift):
         seed = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
