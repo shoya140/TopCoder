@@ -9,9 +9,13 @@ class CCipher:
         return res
 
     def getDecodedChar(self, char, shift):
-        seed = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        seed = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz'
         index = seed.find(char)
-        res = index - shift
+
+        if index < 0:
+            return char
+
+        res = index - shift*2
         if res < 0:
             res = res + len(seed)
         elif res >= len(seed):
